@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- title -->
+    <title>video</title>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+</head>
+<body>
+    <h1>video frame</h1>
+    <img src="{{ url_for('get_video') }}">
+    <h2><span id="output"></span></h2>
+
+    <table>
+        <tr>
+            <td></td>
+            <td align="center">
+                <input type="button" value="forward" onClick="change_direction('forward')">
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="left" onClick="change_direction('left')"></td>
+            <td align="center">
+                <input type="button" value="stop" onClick="change_direction('stop')">
+            </td>
+            <td><input type="button" value="right" onClick="change_direction('right')"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="center">
+                <input type="button" value="backward" onClick="change_direction('backward')">
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
